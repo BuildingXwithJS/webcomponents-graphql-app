@@ -43,7 +43,7 @@ export class AppHome {
 
         <p>Here are your notes:</p>
 
-        {this.notes.map(noteData => <note-item name={noteData.name} id={noteData._id} />)}
+        {this.notes.map(noteData => <note-item name={noteData.name} noteId={noteData._id} />)}
       </div>
     );
   }

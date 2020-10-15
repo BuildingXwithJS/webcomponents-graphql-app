@@ -17,8 +17,8 @@ export namespace Components {
     interface AppRoot {
     }
     interface NoteItem {
-        "id": string;
         "name": string;
+        "noteId": string;
     }
 }
 declare global {
@@ -72,8 +72,8 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface NoteItem {
-        "id"?: string;
         "name"?: string;
+        "noteId"?: string;
     }
     interface IntrinsicElements {
         "add-note": AddNote;

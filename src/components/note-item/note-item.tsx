@@ -7,13 +7,13 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class Note {
   @Prop() name: string;
-  @Prop() id: string;
+  @Prop() noteId: string;
 
   render() {
     return (
       <div class="note-item">
 
-        <stencil-route-link url={`/note/${this.id}`}>
+        <stencil-route-link url={`/note/${this.noteId}`}>
           <a>{this.name}</a>
         </stencil-route-link>
       </div>
