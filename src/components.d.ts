@@ -7,26 +7,38 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MatchResults } from "@stencil/router";
 export namespace Components {
+    interface AddNote {
+    }
     interface AppHome {
     }
-    interface AppProfile {
+    interface AppNote {
         "match": MatchResults;
     }
     interface AppRoot {
     }
+    interface NoteItem {
+        "id": string;
+        "name": string;
+    }
 }
 declare global {
+    interface HTMLAddNoteElement extends Components.AddNote, HTMLStencilElement {
+    }
+    var HTMLAddNoteElement: {
+        prototype: HTMLAddNoteElement;
+        new (): HTMLAddNoteElement;
+    };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
     var HTMLAppHomeElement: {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
+    interface HTMLAppNoteElement extends Components.AppNote, HTMLStencilElement {
     }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
+    var HTMLAppNoteElement: {
+        prototype: HTMLAppNoteElement;
+        new (): HTMLAppNoteElement;
     };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
@@ -34,33 +46,52 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLNoteItemElement extends Components.NoteItem, HTMLStencilElement {
+    }
+    var HTMLNoteItemElement: {
+        prototype: HTMLNoteItemElement;
+        new (): HTMLNoteItemElement;
+    };
     interface HTMLElementTagNameMap {
+        "add-note": HTMLAddNoteElement;
         "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
+        "app-note": HTMLAppNoteElement;
         "app-root": HTMLAppRootElement;
+        "note-item": HTMLNoteItemElement;
     }
 }
 declare namespace LocalJSX {
+    interface AddNote {
+        "onNoteAdded"?: (event: CustomEvent<Object>) => void;
+    }
     interface AppHome {
     }
-    interface AppProfile {
+    interface AppNote {
         "match"?: MatchResults;
     }
     interface AppRoot {
     }
+    interface NoteItem {
+        "id"?: string;
+        "name"?: string;
+    }
     interface IntrinsicElements {
+        "add-note": AddNote;
         "app-home": AppHome;
-        "app-profile": AppProfile;
+        "app-note": AppNote;
         "app-root": AppRoot;
+        "note-item": NoteItem;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "add-note": LocalJSX.AddNote & JSXBase.HTMLAttributes<HTMLAddNoteElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
+            "app-note": LocalJSX.AppNote & JSXBase.HTMLAttributes<HTMLAppNoteElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "note-item": LocalJSX.NoteItem & JSXBase.HTMLAttributes<HTMLNoteItemElement>;
         }
     }
 }

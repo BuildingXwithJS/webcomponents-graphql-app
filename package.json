@@ -8,11 +8,23 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "graffiti:start": "graffiti dev",
+    "mongo:start": "docker run --name mongodb -p 27017:27017 -d mongo"
   },
   "devDependencies": {
     "@stencil/core": "^2.0.0",
-    "@stencil/router": "^1.0.1"
+    "@stencil/router": "^1.0.1",
+    "@types/jest": "^26.0.14"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/iron-autogrow-textarea": "^3.0.3",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-input": "^3.2.1",
+    "fastify-cors": "^4.1.0",
+    "graffiti": "^1.1.2",
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.2.0"
+  }
 }
