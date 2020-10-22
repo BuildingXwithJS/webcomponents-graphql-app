@@ -1,16 +1,16 @@
-# Trying out Stencil and Web Components for basic GraphQL app
+# Trying out ES Modules, Polymer and Web Components for basic GraphQL app
 
-> Building a simple GraphQL based notes app with Stencil
+> Building a simple GraphQL based notes app with ES Modules
 
-This repository contains code and related materials for [Web Components in 2020](https://youtu.be/wbMfwcscrfU) video.
+This repository contains code and related materials for [VanillaJS web app with web components](https://youtu.be/22bbthyvXlI) video.
 
 ## Project description
 
-This is a small demo showing how to build a simple notes app using Stencil and Web Components.
+This is a small demo showing how to build a simple notes app using ES Modules, Polymer and Web Components.
 
 ## Related links
 
-- [Stencil](https://stenciljs.com/)
+- [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 - [Web Components](https://www.webcomponents.org/)
 
 ## Useful links
