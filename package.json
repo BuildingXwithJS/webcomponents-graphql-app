@@ -2,29 +2,18 @@
   "name": "webcomponents-graphql-app",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "description": "VanillaJS web components app",
   "scripts": {
-    "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
+    "start": "http-server",
     "graffiti:start": "graffiti dev",
     "mongo:start": "docker run --name mongodb -p 27017:27017 -d mongo"
   },
   "devDependencies": {
-    "@stencil/core": "^2.0.0",
-    "@stencil/router": "^1.0.1",
-    "@types/jest": "^26.0.14"
+    "http-server": "^0.12.3"
   },
   "license": "MIT",
   "dependencies": {
-    "@polymer/iron-autogrow-textarea": "^3.0.3",
-    "@polymer/paper-button": "^3.0.1",
-    "@polymer/paper-input": "^3.2.1",
     "fastify-cors": "^4.1.0",
-    "graffiti": "^1.1.2",
-    "graphql": "^15.3.0",
-    "graphql-request": "^3.2.0"
+    "graffiti": "^1.1.2"
   }
 }
